@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/txtCoin"
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:hint="Coin"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/btnInsertCoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:text="Insert Coin"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</LinearLayout>

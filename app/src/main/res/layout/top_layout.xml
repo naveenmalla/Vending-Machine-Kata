@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Balance:"
+        android:textSize="32dp"
+        android:layout_margin="6dp"
+        android:id="@+id/lblBalance" />
+
+    <TextView
+        android:id="@+id/txtBalance"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:text="$0"
+        android:textSize="32dp" />
+    <Button
+        android:id="@+id/btnReturnCoins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:text="Return Coins" />
+</LinearLayout>

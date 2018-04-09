@@ -36,4 +36,6 @@ public class ProductViewModel extends BaseObservable{
     public void setImagepath(String imagepath) {
         this.imagepath = imagepath;
     }
+
+
 }

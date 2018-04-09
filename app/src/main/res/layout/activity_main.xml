@@ -7,22 +7,30 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <FrameLayout
+        android:id="@+id/topFragment"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#d49090"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <!-- <FrameLayout
+        android:id="@+id/centerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#d49090"
+        app:layout_constraintTop_toTopOf="parent"/> -->
     <ListView
         android:layout_weight="8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/productListView"
-        android:dividerHeight="5dp"/>
-
-    <Button
-        android:id="@+id/btnAddfund"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add Funds"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        android:dividerHeight="5dp" />
+    <FrameLayout
+        android:id="@+id/bottomFragment"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#d49090"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 
 </LinearLayout>
