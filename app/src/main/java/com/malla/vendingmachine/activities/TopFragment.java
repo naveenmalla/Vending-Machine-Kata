@@ -1,4 +1,4 @@
-package com.malla.vendingmachine;
+package com.malla.vendingmachine.activities;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.malla.vendingmachine.R;
 import com.malla.vendingmachine.viewmodel.VendingMachineViewModel;
 
 public class TopFragment extends Fragment {
@@ -33,6 +34,14 @@ public class TopFragment extends Fragment {
             }
         };
         viewModel.getVendingMachineBalance().observe(this, balanceObserver);
+
+        final Observer<String> messageObserver = new Observer<String>() {
+            @Override
+            public void onChanged(@Nullable String s) {
+                ((TextView) view.findViewById(R.id.txtMessage)).setText(s);
+            }
+        };
+        viewModel.getVendingMachineMessage().observe(this, messageObserver);
 
         view.findViewById(R.id.btnReturnCoins).setOnClickListener(new View.OnClickListener()
         {

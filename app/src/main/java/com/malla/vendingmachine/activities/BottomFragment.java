@@ -1,4 +1,4 @@
-package com.malla.vendingmachine;
+package com.malla.vendingmachine.activities;
 
 import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.malla.vendingmachine.R;
 import com.malla.vendingmachine.viewmodel.VendingMachineViewModel;
 
 public class BottomFragment extends Fragment {
@@ -24,25 +25,25 @@ public class BottomFragment extends Fragment {
 
         viewModel = ViewModelProviders.of(getActivity()).get(VendingMachineViewModel.class);
 
-
-
         view.findViewById(R.id.btnInsertCoin).setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                EditText s = (EditText) view.findViewById(R.id.txtCoin);
-                float usdValue = Float.parseFloat(s.getText().toString());
-                int coinValue = (int) Math.floor(usdValue * 100);
-                //TextView d = (TextView) view.findViewById(R.id.txtBalance) ;
-
-                if(viewModel.addFunds(coinValue)){
-                    s.setText("");
-                    //d.setText("25");
+                EditText txtCoin = (EditText) view.findViewById(R.id.txtCoin);
+                String coin = txtCoin.getText().toString();
+                if(coin.length() != 0) {
+                    float usdValue = Float.parseFloat(coin);
+                    int coinValue = (int) Math.floor(usdValue * 100);
+                    if (viewModel.addFunds(coinValue)) {
+                        txtCoin.setText("");
+                    } else {
+                        txtCoin.setError("Please insert only nickels, dimes, and quarters");
+                    }
                 } else {
-                    s.setError("Please insert only nickels, dimes, and quarters");
+                    txtCoin.setError("Please insert only nickels, dimes, and quarters");
                 }
-                s.setText("");
+                txtCoin.setText("");
             }
         });
 

@@ -54,4 +54,5 @@ public class ProductViewAdapter extends BaseAdapter {
 
         return productViewBinding.getRoot();
     }
+
 }

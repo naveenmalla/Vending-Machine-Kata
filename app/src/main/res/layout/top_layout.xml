@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<GridLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
-
+    android:orientation="vertical">
+   <LinearLayout
+       android:id="@+id/top_row"
+       android:orientation="horizontal">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -13,7 +14,6 @@
         android:textSize="32dp"
         android:layout_margin="6dp"
         android:id="@+id/lblBalance" />
-
     <TextView
         android:id="@+id/txtBalance"
         android:layout_width="100dp"
@@ -27,4 +27,16 @@
         android:layout_height="wrap_content"
         android:layout_margin="6dp"
         android:text="Return Coins" />
-</LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/bottom_row"
+        android:orientation="horizontal">
+    <TextView
+            android:id="@+id/txtMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:text="INSERT COINS"
+            android:textSize="22dp" />
+    </LinearLayout>
+</GridLayout>
