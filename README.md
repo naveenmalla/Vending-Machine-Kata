@@ -1,4 +1,7 @@
 # Vending-Machine-Kata
+
+![screenshot_1523335927](https://user-images.githubusercontent.com/13721715/38536976-e2ccfeea-3c40-11e8-8916-477a91c98b51.png)
+
 Mobile Vending Machine App Kata
 ===============================
 In this exercise you will build a simulated vending machine mobile application.
